@@ -33,3 +33,9 @@ npm.cmd run build
 ```
 
 The finished website is generated into `out`.
+
+## Deployment
+
+- Push changes to `main` on GitHub.
+- Connect the repository in Vercel and set the root directory to the project directory.
+- Add a production domain in Vercel Domains after deploy.
