@@ -6,46 +6,46 @@ import { motion } from 'framer-motion'
 export default function Gallery() {
   const galleryItems = [
     {
-      src: '/images/tiny-leaders/hero-classroom.png',
-      title: 'áƒœáƒáƒ—áƒ”áƒšáƒ˜ áƒ“áƒ áƒ£áƒ¡áƒáƒ¤áƒ áƒ—áƒ®áƒ áƒ¡áƒáƒ¡áƒ¬áƒáƒ•áƒšáƒ áƒ¡áƒ˜áƒ•áƒ áƒªáƒ”',
-      category: 'áƒ¡áƒáƒ‘áƒáƒ•áƒ¨áƒ•áƒ áƒ‘áƒáƒ¦áƒ˜',
+      src: '/images/tiny-leaders/hero-classroom.webp',
+      title: 'ნათელი და უსაფრთხო სასწავლო სივრცე',
+      category: 'საბავშვო ბაღი',
       tall: true,
     },
     {
-      src: '/images/tiny-leaders/learning-program.png',
-      title: 'áƒ˜áƒœáƒ¢áƒ”áƒ áƒáƒ¥áƒ¢áƒ˜áƒ£áƒšáƒ˜ áƒáƒ™áƒáƒ“áƒ”áƒ›áƒ˜áƒ£áƒ áƒ˜ áƒ¡áƒ¬áƒáƒ•áƒšáƒ”áƒ‘áƒ',
-      category: 'áƒ¡áƒáƒ¡áƒ™áƒáƒšáƒ áƒ›áƒáƒ›áƒ–áƒáƒ“áƒ”áƒ‘áƒ',
+      src: '/images/tiny-leaders/learning-program.webp',
+      title: 'ინტერაქტიული აკადემიური სწავლება',
+      category: 'სასკოლო მომზადება',
     },
     {
-      src: '/images/tiny-leaders/therapy-services.png',
-      title: 'áƒžáƒ áƒáƒ¤áƒ”áƒ¡áƒ˜áƒ£áƒšáƒ˜ áƒ—áƒ”áƒ áƒáƒžáƒ˜áƒ£áƒšáƒ˜ áƒ›áƒ®áƒáƒ áƒ“áƒáƒ­áƒ”áƒ áƒ',
-      category: 'áƒ’áƒáƒœáƒ•áƒ˜áƒ—áƒáƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒªáƒ”áƒœáƒ¢áƒ áƒ˜',
+      src: '/images/tiny-leaders/therapy-services.webp',
+      title: 'პროფესიული თერაპიული მხარდაჭერა',
+      category: 'განვითარების ცენტრი',
     },
     {
-      src: '/images/tiny-leaders/field-programs.png',
-      title: 'áƒ’áƒáƒ áƒ” áƒ“áƒ áƒ’áƒáƒ¡áƒ•áƒšáƒ˜áƒ—áƒ˜ áƒžáƒ áƒáƒ’áƒ áƒáƒ›áƒ”áƒ‘áƒ˜',
-      category: 'áƒ’áƒáƒ›áƒáƒªáƒ“áƒ˜áƒšáƒ”áƒ‘áƒ˜áƒ— áƒ¡áƒ¬áƒáƒ•áƒšáƒ',
+      src: '/images/tiny-leaders/field-programs.webp',
+      title: 'გარე და გასვლითი პროგრამები',
+      category: 'გამოცდილებით სწავლა',
     },
     {
-      src: '/images/tiny-leaders/theater-dance.png',
-      title: 'áƒ‘áƒáƒ•áƒ¨áƒ•áƒ—áƒ áƒ—áƒ”áƒáƒ¢áƒ áƒ˜ áƒ“áƒ áƒ¥áƒáƒ áƒ—áƒ£áƒšáƒ˜ áƒªáƒ”áƒ™áƒ•áƒ',
-      category: 'áƒ¨áƒ”áƒ›áƒáƒ¥áƒ›áƒ”áƒ“áƒ”áƒ‘áƒ˜áƒ—áƒ˜ áƒ¡áƒ¢áƒ£áƒ“áƒ˜áƒ”áƒ‘áƒ˜',
+      src: '/images/tiny-leaders/theater-dance.webp',
+      title: 'ბავშვთა თეატრი და ქართული ცეკვა',
+      category: 'შემოქმედებითი სტუდიები',
       tall: true,
     },
     {
-      src: '/images/tiny-leaders/celebrations.png',
-      title: 'áƒ¦áƒáƒœáƒ˜áƒ¡áƒ«áƒ˜áƒ”áƒ‘áƒ”áƒ‘áƒ˜ áƒ‘áƒáƒ•áƒ¨áƒ•áƒ”áƒ‘áƒ˜áƒ¡áƒ áƒ“áƒ áƒáƒ¯áƒáƒ®áƒ”áƒ‘áƒ˜áƒ¡áƒ—áƒ•áƒ˜áƒ¡',
-      category: 'áƒ–áƒ”áƒ˜áƒ›áƒ”áƒ‘áƒ˜',
+      src: '/images/tiny-leaders/celebrations.webp',
+      title: 'ღონისძიებები ბავშვებისა და ოჯახებისთვის',
+      category: 'ზეიმები',
     },
     {
-      src: '/images/tiny-leaders/creative-classroom.png',
-      title: 'áƒ®áƒ”áƒšáƒáƒ•áƒœáƒ”áƒ‘áƒ, áƒ®áƒ”áƒšáƒ¡áƒáƒ¥áƒ›áƒ” áƒ“áƒ áƒ¨áƒ”áƒ›áƒáƒ¥áƒ›áƒ”áƒ“áƒ”áƒ‘áƒ˜áƒ—áƒ˜ áƒžáƒ áƒáƒ”áƒ¥áƒ¢áƒ”áƒ‘áƒ˜',
-      category: 'áƒ§áƒáƒ•áƒ”áƒšáƒ“áƒ¦áƒ˜áƒ£áƒ áƒ˜ áƒáƒ¥áƒ¢áƒ˜áƒ•áƒáƒ‘áƒ”áƒ‘áƒ˜',
+      src: '/images/tiny-leaders/creative-classroom.webp',
+      title: 'ხელოვნება, ხელსაქმე და შემოქმედებითი პროექტები',
+      category: 'ყოველდღიური აქტივობები',
     },
     {
       src: '/images/tiny-leaders/safe-transportation.svg',
-      title: 'Safe and supervised transportation service',
-      category: 'Safe Transportation',
+      title: 'უსაფრთხო და მეთვალყურე ტრანსპორტირების სერვისი',
+      category: 'უსაფრთხო ტრანსპორტირება',
     },
   ]
 
@@ -61,14 +61,14 @@ export default function Gallery() {
         >
           <div className="mb-14 text-center">
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-primary">
-              áƒ’áƒáƒšáƒ”áƒ áƒ”áƒ
+              გალერეა
             </p>
             <h2 className="mb-5 text-4xl font-bold text-ink md:text-5xl">
-              áƒ—áƒ‘áƒ˜áƒšáƒ˜, áƒ—áƒáƒœáƒáƒ›áƒ”áƒ“áƒ áƒáƒ•áƒ” áƒ“áƒ áƒáƒ¥áƒ¢áƒ˜áƒ£áƒ áƒ˜ áƒ¡áƒáƒ¡áƒ¬áƒáƒ•áƒšáƒ áƒ’áƒáƒ áƒ”áƒ›áƒ
+              თბილი, თანამედროვე და აქტიური სასწავლო გარემო
             </h2>
             <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted">
-              áƒ—áƒáƒ˜áƒœáƒ˜ áƒšáƒ˜áƒ“áƒ”áƒ áƒ¡áƒ˜áƒ¡ áƒ’áƒáƒ›áƒáƒªáƒ“áƒ˜áƒšáƒ”áƒ‘áƒ áƒáƒ”áƒ áƒ—áƒ˜áƒáƒœáƒ”áƒ‘áƒ¡ áƒ¡áƒáƒ‘áƒáƒ•áƒ¨áƒ•áƒ áƒ‘áƒáƒ¦áƒ˜áƒ¡ áƒ–áƒ áƒ£áƒœáƒ•áƒáƒ¡, áƒáƒ™áƒáƒ“áƒ”áƒ›áƒ˜áƒ£áƒ 
-              áƒ›áƒáƒ›áƒ–áƒáƒ“áƒ”áƒ‘áƒáƒ¡, áƒ—áƒ”áƒ áƒáƒžáƒ˜áƒáƒ¡, áƒ¨áƒ”áƒ›áƒáƒ¥áƒ›áƒ”áƒ“áƒ”áƒ‘áƒ˜áƒ— áƒ®áƒ”áƒšáƒáƒ•áƒœáƒ”áƒ‘áƒáƒ¡, áƒ’áƒáƒ áƒ” áƒžáƒ áƒáƒ’áƒ áƒáƒ›áƒ”áƒ‘áƒ¡ áƒ“áƒ áƒáƒ¯áƒáƒ®áƒ£áƒ  áƒ–áƒ”áƒ˜áƒ›áƒ”áƒ‘áƒ¡.
+              თაინი ლიდერსის გამოცდილება აერთიანებს საბავშვო ბაღის ზრუნვას, აკადემიურ
+              მომზადებას, თერაპიას, შემოქმედებით ხელოვნებას, გარე პროგრამებს და ოჯახურ ზეიმებს.
             </p>
           </div>
 

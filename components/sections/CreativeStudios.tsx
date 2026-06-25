@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -84,7 +84,7 @@ export default function CreativeStudios() {
             className="overflow-hidden rounded-lg shadow-2xl"
           >
             <Image
-              src="/images/tiny-leaders/theater-dance.png"
+              src="/images/tiny-leaders/theater-dance.webp"
               alt="ბავშვთა თეატრი და ქართული ცეკვის სტუდია თაინი ლიდერსში"
               width={1536}
               height={864}

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -61,7 +61,7 @@ export default function Celebrations() {
               className="overflow-hidden rounded-lg shadow-2xl"
             >
               <Image
-                src="/images/tiny-leaders/celebrations.png"
+                src="/images/tiny-leaders/celebrations.webp"
                 alt="თაინი ლიდერსის ღონისძიებები და ზეიმები ბავშვებისა და ოჯახებისთვის"
                 width={1536}
                 height={864}

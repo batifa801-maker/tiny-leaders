@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -33,7 +33,7 @@ export default function TherapyServices() {
             className="relative overflow-hidden rounded-lg shadow-2xl"
           >
             <Image
-              src="/images/tiny-leaders/therapy-services.png"
+              src="/images/tiny-leaders/therapy-services.webp"
               alt="თაინი ლიდერსის პროფესიული თერაპიული სერვისები"
               width={1536}
               height={864}

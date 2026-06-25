@@ -1,38 +1,39 @@
-﻿'use client'
+'use client'
 
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import BrandLogo from './BrandLogo'
 
 const navItems = [
-  { name: 'áƒ¡áƒáƒáƒ—áƒáƒ‘áƒ áƒ˜áƒ•áƒ˜ áƒ–áƒ áƒ£áƒœáƒ•áƒ', id: '#flexible-childcare' },
-  { name: 'áƒ›áƒ—áƒáƒ•áƒáƒ áƒ˜', id: '#home' },
-  { name: 'áƒ©áƒ•áƒ”áƒœ áƒ¨áƒ”áƒ¡áƒáƒ®áƒ”áƒ‘', id: '#about' },
-  { name: 'áƒ¡áƒáƒ‘áƒáƒ•áƒ¨áƒ•áƒ áƒ‘áƒáƒ¦áƒ˜áƒ¡ áƒžáƒ áƒáƒ’áƒ áƒáƒ›áƒ”áƒ‘áƒ˜', id: '#programs' },
-  { name: 'áƒ“áƒáƒ¬áƒ§áƒ”áƒ‘áƒ˜áƒ—áƒ˜ áƒ¡áƒ™áƒáƒšáƒ˜áƒ¡ áƒ›áƒáƒ›áƒ–áƒáƒ“áƒ”áƒ‘áƒ', id: '#elementary-preparation' },
-  { name: 'áƒ—áƒ”áƒ áƒáƒžáƒ˜áƒ£áƒšáƒ˜ áƒ¡áƒ”áƒ áƒ•áƒ˜áƒ¡áƒ”áƒ‘áƒ˜', id: '#therapy' },
-  { name: 'Safe Transportation', id: '#transportation-services' },
-  { name: 'áƒáƒ¥áƒ¢áƒ˜áƒ•áƒáƒ‘áƒ”áƒ‘áƒ˜ áƒ“áƒ áƒ¦áƒáƒœáƒ˜áƒ¡áƒ«áƒ˜áƒ”áƒ‘áƒ”áƒ‘áƒ˜', id: '#activities' },
-  { name: 'áƒ‘áƒáƒ•áƒ¨áƒ•áƒ—áƒ áƒ—áƒ”áƒáƒ¢áƒ áƒ˜', id: '#childrens-theater' },
-  { name: 'áƒ¥áƒáƒ áƒ—áƒ£áƒšáƒ˜ áƒªáƒ”áƒ™áƒ•áƒ˜áƒ¡ áƒ¡áƒ¢áƒ£áƒ“áƒ˜áƒ', id: '#georgian-dance' },
-  { name: 'áƒ’áƒáƒšáƒ”áƒ áƒ”áƒ', id: '#gallery' },
-  { name: 'áƒ™áƒáƒœáƒ¢áƒáƒ¥áƒ¢áƒ˜', id: '#contact' },
+  { name: 'საათობრივი ზრუნვა', id: '#flexible-childcare' },
+  { name: 'მთავარი', id: '#home' },
+  { name: 'ჩვენ შესახებ', id: '#about' },
+  { name: 'საბავშვო ბაღის პროგრამები', id: '#programs' },
+  { name: 'დაწყებითი სკოლის მომზადება', id: '#elementary-preparation' },
+  { name: 'თერაპიული სერვისები', id: '#therapy' },
+  { name: 'უსაფრთხო ტრანსპორტირება', id: '#transportation-services' },
+  { name: 'აქტივობები და ღონისძიებები', id: '#activities' },
+  { name: 'ბავშვთა თეატრი', id: '#childrens-theater' },
+  { name: 'ქართული ცეკვის სტუდია', id: '#georgian-dance' },
+  { name: 'გალერეა', id: '#gallery' },
+  { name: 'კონტაქტი', id: '#contact' },
 ]
+
+const NAV_OFFSET = 96
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = useCallback((id: string) => {
     const element = document.querySelector(id)
 
     if (!element) {
       return false
     }
 
-    const navOffset = 96
-    const top = element.getBoundingClientRect().top + window.scrollY - navOffset
+    const top = element.getBoundingClientRect().top + window.scrollY - NAV_OFFSET
 
     window.scrollTo({
       top: Math.max(top, 0),
@@ -41,9 +42,9 @@ export default function Navigation() {
 
     setIsMobileMenuOpen(false)
     return true
-  }
+  }, [])
 
-  const scrollToHashTarget = () => {
+  const scrollToHashTarget = useCallback(() => {
     const hash = window.location.hash
     if (!hash) return
 
@@ -61,11 +62,14 @@ export default function Navigation() {
     }
 
     setTimeout(tryScroll, 20)
-  }
+  }, [scrollToSection])
 
   useEffect(() => {
+    document.body.classList.add('motion-ready')
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
+      setIsMobileMenuOpen((open) => (open ? false : open))
     }
 
     const handleHashScroll = () => {
@@ -81,8 +85,9 @@ export default function Navigation() {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('hashchange', handleHashScroll)
       window.removeEventListener('load', handleHashScroll)
+      document.body.classList.remove('motion-ready')
     }
-  }, [])
+  }, [scrollToHashTarget])
 
   return (
     <motion.nav
@@ -101,13 +106,13 @@ export default function Navigation() {
             whileTap={{ scale: 0.98 }}
             className="flex min-w-fit items-center gap-2 text-left"
             onClick={() => scrollToSection('#home')}
-            aria-label="áƒ—áƒáƒ˜áƒœáƒ˜ áƒšáƒ˜áƒ“áƒ”áƒ áƒ¡áƒ˜áƒ¡ áƒ›áƒ—áƒáƒ•áƒáƒ áƒ˜ áƒ’áƒ•áƒ”áƒ áƒ“áƒ˜"
+            aria-label="თაინი ლიდერსის მთავარი გვერდი"
           >
             <BrandLogo priority variant="nav" />
             <div className="hidden sm:block">
-              <h1 className="brand-rainbow-text text-xl font-bold">áƒ—áƒáƒ˜áƒœáƒ˜ áƒšáƒ˜áƒ“áƒ”áƒ áƒ¡áƒ˜</h1>
+              <h1 className="brand-rainbow-text text-xl font-bold">თაინი ლიდერსი</h1>
               <p className="max-w-44 text-xs font-medium leading-snug text-muted">
-                áƒ’áƒáƒœáƒáƒ—áƒšáƒ”áƒ‘áƒ˜áƒ¡, áƒ’áƒáƒœáƒ•áƒ˜áƒ—áƒáƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒ“áƒ áƒ¡áƒáƒ¡áƒ™áƒáƒšáƒ áƒ›áƒáƒ›áƒ–áƒáƒ“áƒ”áƒ‘áƒ˜áƒ¡ áƒªáƒ”áƒœáƒ¢áƒ áƒ˜
+                განათლების, განვითარების და სასკოლო მომზადების ცენტრი
               </p>
             </div>
           </motion.button>
@@ -132,13 +137,13 @@ export default function Navigation() {
             onClick={() => scrollToSection('#contact')}
             className="brand-button hidden min-w-fit rounded-full px-5 py-2.5 text-sm font-bold xl:inline-flex"
           >
-            áƒ©áƒáƒ¬áƒ”áƒ áƒ
+            ჩაწერა
           </motion.button>
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="rounded-lg p-2 text-ink transition-colors hover:bg-mist xl:hidden"
-            aria-label="áƒœáƒáƒ•áƒ˜áƒ’áƒáƒªáƒ˜áƒ˜áƒ¡ áƒ›áƒ”áƒœáƒ˜áƒ£"
+            aria-label="ნავიგაციის მენიუ"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -41,7 +41,7 @@ export default function About() {
             className="relative overflow-hidden rounded-lg shadow-2xl"
           >
             <Image
-              src="/images/tiny-leaders/creative-classroom.png"
+              src="/images/tiny-leaders/creative-classroom.webp"
               alt="თაინი ლიდერსის შემოქმედებითი სასწავლო სივრცე"
               width={1536}
               height={864}

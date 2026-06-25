@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Tiny Leaders | სწავლა, განვითარება, შემოქმედება, თერაპია და სასკოლო მომზადება",
     description:
       "ერთი სივრცე საბავშვო ბაღის პროგრამებისთვის, დაწყებითი სკოლის მოსამზადებლად, თერაპიული მხარდაჭერისთვის, შემოქმედებითი ხელოვნებისთვის და გარე სწავლებისთვის.",
-    images: ["/images/tiny-leaders/hero-classroom.png"],
+    images: ["/images/tiny-leaders/hero-classroom.webp"],
     locale: "ka_GE",
     type: "website",
   },

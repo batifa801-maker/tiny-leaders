@@ -79,10 +79,22 @@ img {
 }
 
 .brand-rainbow-text {
+  color: #12bdb4;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .brand-rainbow-text {
   background: linear-gradient(90deg, #12bdb4, #3498d8, #8bc53f, #f8bd08, #ff6152);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  }
+}
+
+body:not(.motion-ready) main [style*="opacity:0"],
+body:not(.motion-ready) footer [style*="opacity:0"] {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .launch-invitation {

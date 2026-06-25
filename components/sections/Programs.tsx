@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -75,7 +75,7 @@ export default function Programs() {
           <div className="mb-10 overflow-hidden rounded-lg border border-brand-line bg-white shadow-xl">
             <div className="grid lg:grid-cols-[0.95fr_1.05fr]">
               <Image
-                src="/images/tiny-leaders/learning-program.png"
+                src="/images/tiny-leaders/learning-program.webp"
                 alt="თაინი ლიდერსის სასწავლო პროგრამა"
                 width={1536}
                 height={864}

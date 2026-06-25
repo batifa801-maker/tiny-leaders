@@ -15,13 +15,11 @@ import FAQ from '@/components/sections/FAQ'
 import Contact from '@/components/sections/Contact'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
-import OpeningBubbles from '@/components/OpeningBubbles'
 import LaunchInvitation from '@/components/LaunchInvitation'
 
 export default function Home() {
   return (
     <div className="relative isolate flex min-h-screen flex-col">
-      <OpeningBubbles />
       <LaunchInvitation />
       <Navigation />
       <main className="relative z-10 flex-1">

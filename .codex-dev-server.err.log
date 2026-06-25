@@ -1,0 +1,111 @@
+⨯ ./components/sections/Contact.tsx
+Error:   x Expected ';', '}' or <eof>
+     ,-[C:\Users\gigal\CascadeProjects\tiny-leaders\components\sections\Contact.tsx:366:1]
+ 363 |       )
+ 364 |     }
+ 365 |                               key={program}
+ 366 | ,->                           className="group inline-flex cursor-pointer items-center rounded-full border-2 border-brand-line bg-white px-4 py-2 text-sm font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary has-[:checked]:text-white"
+ 367 | |                           >
+ 368 | |                             <input
+ 369 | |                               type="checkbox"
+ 370 | |                               name="programs"
+ 371 | |                               value={program}
+ 372 | |                               className="peer sr-only"
+ 373 | |                             />
+ 374 | |->                           <span className="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full border border-current text-[10px] leading-none opacity-70 transition-opacity peer-checked:opacity-100">
+     : `---                                ^^^^^^^^^
+     : `---- This is the expression part of an expression statement
+ 375 |                                 ✓
+ 376 |                               </span>
+ 377 |                               <span>{program}</span>
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/sections/Contact.tsx
+⨯ ./components/sections/Contact.tsx
+Error:   x Expected ';', '}' or <eof>
+     ,-[C:\Users\gigal\CascadeProjects\tiny-leaders\components\sections\Contact.tsx:366:1]
+ 363 |       )
+ 364 |     }
+ 365 |                               key={program}
+ 366 | ,->                           className="group inline-flex cursor-pointer items-center rounded-full border-2 border-brand-line bg-white px-4 py-2 text-sm font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary has-[:checked]:text-white"
+ 367 | |                           >
+ 368 | |                             <input
+ 369 | |                               type="checkbox"
+ 370 | |                               name="programs"
+ 371 | |                               value={program}
+ 372 | |                               className="peer sr-only"
+ 373 | |                             />
+ 374 | |->                           <span className="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full border border-current text-[10px] leading-none opacity-70 transition-opacity peer-checked:opacity-100">
+     : `---                                ^^^^^^^^^
+     : `---- This is the expression part of an expression statement
+ 375 |                                 ✓
+ 376 |                               </span>
+ 377 |                               <span>{program}</span>
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/sections/Contact.tsx
+./app/page.tsx
+⨯ ./components/sections/Contact.tsx
+Error:   x Expected ';', '}' or <eof>
+     ,-[C:\Users\gigal\CascadeProjects\tiny-leaders\components\sections\Contact.tsx:366:1]
+ 363 |       )
+ 364 |     }
+ 365 |                               key={program}
+ 366 | ,->                           className="group inline-flex cursor-pointer items-center rounded-full border-2 border-brand-line bg-white px-4 py-2 text-sm font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary has-[:checked]:text-white"
+ 367 | |                           >
+ 368 | |                             <input
+ 369 | |                               type="checkbox"
+ 370 | |                               name="programs"
+ 371 | |                               value={program}
+ 372 | |                               className="peer sr-only"
+ 373 | |                             />
+ 374 | |->                           <span className="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full border border-current text-[10px] leading-none opacity-70 transition-opacity peer-checked:opacity-100">
+     : `---                                ^^^^^^^^^
+     : `---- This is the expression part of an expression statement
+ 375 |                                 ✓
+ 376 |                               </span>
+ 377 |                               <span>{program}</span>
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/sections/Contact.tsx
+./app/page.tsx
+⨯ ./components/sections/Contact.tsx
+Error:   x Expected ';', '}' or <eof>
+     ,-[C:\Users\gigal\CascadeProjects\tiny-leaders\components\sections\Contact.tsx:366:1]
+ 363 |       )
+ 364 |     }
+ 365 |                               key={program}
+ 366 | ,->                           className="group inline-flex cursor-pointer items-center rounded-full border-2 border-brand-line bg-white px-4 py-2 text-sm font-semibold text-ink transition-all hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary has-[:checked]:text-white"
+ 367 | |                           >
+ 368 | |                             <input
+ 369 | |                               type="checkbox"
+ 370 | |                               name="programs"
+ 371 | |                               value={program}
+ 372 | |                               className="peer sr-only"
+ 373 | |                             />
+ 374 | |->                           <span className="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full border border-current text-[10px] leading-none opacity-70 transition-opacity peer-checked:opacity-100">
+     : `---                                ^^^^^^^^^
+     : `---- This is the expression part of an expression statement
+ 375 |                                 ✓
+ 376 |                               </span>
+ 377 |                               <span>{program}</span>
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/sections/Contact.tsx
+./app/page.tsx

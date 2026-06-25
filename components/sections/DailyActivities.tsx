@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -71,7 +71,7 @@ export default function DailyActivities() {
               className="overflow-hidden rounded-lg shadow-2xl"
             >
               <Image
-                src="/images/tiny-leaders/field-programs.png"
+                src="/images/tiny-leaders/field-programs.webp"
                 alt="თაინი ლიდერსის გარე და გასვლითი სასწავლო პროგრამები"
                 width={1536}
                 height={864}

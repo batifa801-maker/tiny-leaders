@@ -1,19 +1,25 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowRight, BusFront, Sparkles } from 'lucide-react'
 import BrandLogo from '../BrandLogo'
 
+const NAV_OFFSET = 96
+
 export default function BrandIntro() {
   const scrollToSection = (id: string) => {
-    document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' })
+    const element = document.querySelector(id)
+    if (!element) return
+
+    const top = element.getBoundingClientRect().top + window.scrollY - NAV_OFFSET
+    window.scrollTo({ top: Math.max(top, 0), behavior: 'smooth' })
   }
 
   return (
     <section id="home" className="relative flex min-h-[94vh] items-center overflow-hidden pt-32 pb-16">
       <Image
-        src="/images/tiny-leaders/hero-classroom.png"
+        src="/images/tiny-leaders/hero-classroom.webp"
         alt="თაინი ლიდერსის ნათელი საგანმანათლებლო სივრცე"
         fill
         priority
@@ -74,17 +80,17 @@ export default function BrandIntro() {
             transition={{ duration: 0.55 }}
             className="mb-10 max-w-3xl rounded-xl border border-primary/20 bg-white/94 p-5 shadow-lg backdrop-blur"
           >
-            <p className="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-primary">Safe Transportation</p>
-            <h3 className="mb-2 text-xl font-bold text-ink">Safe Transportation</h3>
+            <p className="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-primary">ტრანსპორტირების სერვისი</p>
+            <h3 className="mb-2 text-xl font-bold text-ink">უსაფრთხო ტრანსპორტირება</h3>
             <p className="mb-4 text-sm leading-relaxed text-muted sm:text-base">
-              Our professional drivers provide safe and reliable transportation, making daily travel easy and convenient for children
-              and parents.
+              ჩვენი პროფესიონალი მძღოლები უზრუნველყოფენ უსაფრთხო და სანდო ტრანსპორტირებას, რათა ბავშვებისა და მშობლებისთვის
+              ყოველდღიური გადაადგილება იყოს მარტივი და კომფორტული.
             </p>
             <button
               onClick={() => scrollToSection('#transportation-services')}
               className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-white hover:brightness-110"
             >
-              Explore service
+              სერვისის ნახვა
               <BusFront size={18} />
             </button>
           </motion.div>

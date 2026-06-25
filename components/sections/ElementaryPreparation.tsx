@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -61,7 +61,7 @@ export default function ElementaryPreparation() {
               className="relative overflow-hidden rounded-lg shadow-2xl"
             >
               <Image
-                src="/images/tiny-leaders/learning-program.png"
+                src="/images/tiny-leaders/learning-program.webp"
                 alt="დაწყებითი სკოლის მოსამზადებელი პროგრამა თაინი ლიდერსში"
                 width={1536}
                 height={864}

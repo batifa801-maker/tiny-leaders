@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -81,7 +81,7 @@ export default function FlexibleChildcare() {
             >
               <div className="relative mb-6 h-48 overflow-hidden rounded-lg border border-white/24">
                 <Image
-                  src="/images/tiny-leaders/flexible-care.png"
+                  src="/images/tiny-leaders/flexible-care.webp"
                   alt="საათობრივი ზრუნვის თბილი გარემო"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
@@ -118,7 +118,7 @@ export default function FlexibleChildcare() {
             >
               <div className="relative mb-6 h-48 overflow-hidden rounded-lg">
                 <Image
-                  src="/images/tiny-leaders/learning-program.png"
+                  src="/images/tiny-leaders/learning-program.webp"
                   alt="მზრუნველი ყოველდღიური აქტივობები თაინი ლიდერსში"
                   fill
                   sizes="(max-width: 1024px) 100vw, 55vw"

@@ -1,25 +1,25 @@
-﻿'use client'
+'use client'
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { BusFront, CalendarClock, CheckCircle2, ShieldCheck } from 'lucide-react'
 
 const benefits = [
-  'Saves time',
-  'Reduces daily stress',
-  'Safe and supervised transport',
-  'Dependable service',
-  'Greater convenience for working families',
+  'ხარისხიანი დროის დაზოგვა',
+  'ყოველდღიური სტრესის შემცირება',
+  'უსაფრთხო და მეთვალყურე ტრანსპორტირება',
+  'სანდო სერვისი',
+  'დასაქმებული ოჯახებისთვის მეტი კომფორტი',
 ]
 
 const features = [
-  'Professional and experienced drivers',
-  'Safe and comfortable vehicles',
-  'Child safety is the highest priority',
-  'Reliable pick-up and drop-off',
-  'Transportation available throughout the city',
-  'Convenient for busy parents',
-  'Punctual and organized scheduling',
+  'პროფესიონალური და გამოცდილი მძღოლები',
+  'უსაფრთხო და კომფორტული ავტომობილები',
+  'ბავშვის უსაფრთხოება არის მაქსიმალური პრიორიტეტი',
+  'სანდო მიყვანა და ჩამოგვნება',
+  'ტრანსპორტირება ქალაქის მთელ ტერიტორიაზე',
+  'დასაქმებული მშობლებისთვის მოსახერხებელი',
+  'დროისა და რეიზის წესრიგიანი დაგეგმარება',
 ]
 
 export default function SafeTransportation() {
@@ -34,14 +34,14 @@ export default function SafeTransportation() {
           className="mx-auto max-w-6xl"
         >
           <div className="mb-14 text-center">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-primary">Transportation Services</p>
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-primary">ტრანსპორტირების სერვისები</p>
             <h2 className="mb-6 text-4xl font-bold leading-tight text-ink md:text-5xl">
-              Safe Transportation
+              უსაფრთხო ტრანსპორტირება
             </h2>
             <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted">
-              Tiny Leaders provides transportation support to help families who need assistance bringing children to and from the
-              center. Our team handles secure routing, safe vehicle checks, and clear scheduling so daily commutes are calm, practical,
-              and reliable.
+              Tiny Leaders შვილი ეხმარება ცენტრიდან და ცენტრამდე უსაფრთხო და მყარი გზით მოყვანაში და დაბრუნებაში. ჩვენი გუნდი
+              ამსრულებს მარშრუტის უსაფრთხო შერჩევას, ავტომობილების კონტროლს და მკაფიო განრიგს, რომ ყოველდღიური გზავნილი იყოს
+              მშვიდი, პრაქტიკული და სანდო.
             </p>
           </div>
 
@@ -55,14 +55,14 @@ export default function SafeTransportation() {
             >
               <div className="mb-6 inline-flex items-center gap-3 rounded-full bg-mist px-4 py-2 text-sm font-bold text-primary">
                 <ShieldCheck className="h-5 w-5" />
-                Complete Family Support
+                სრული ოჯახის მხარდაჭერა
               </div>
               <h3 className="mb-4 text-3xl font-bold text-ink">
-                Built for the whole family journey
+                შექმნილია მთელი ოჯახის სრული გზისთვის
               </h3>
               <p className="mb-6 leading-relaxed text-muted">
-                In addition to education, childcare, therapy, and extracurricular activities, we now include dependable transportation
-                support so parents can rely on one trusted service for their child's full day journey.
+                განათლების, საბავშვო ზრუნვის, თერაპიის და დამატებითი აქტივობების პარალელურად ჩვენ ახლა ვამატებთ საიმედო
+                ტრანსპორტირების მხარდაჭერას, რომ მშობლებს ჰქონდეთ ერთი ნდობით სანდო სერვისი ბავშვის დღის სრული გზისათვის.
               </p>
 
               <div className="mb-8 grid gap-3 sm:grid-cols-2">
@@ -76,9 +76,9 @@ export default function SafeTransportation() {
 
               <div className="grid gap-3 sm:grid-cols-3">
                 {[
-                  { icon: ShieldCheck, title: 'Safety-first transport' },
-                  { icon: CheckCircle2, title: 'Reliable operation' },
-                  { icon: CalendarClock, title: 'On-time punctuality' },
+                  { icon: ShieldCheck, title: 'საფრთხობის პრიორიტეტი' },
+                  { icon: CheckCircle2, title: 'სანდო ოპერაცია' },
+                  { icon: CalendarClock, title: 'პუნქტუალურობა და დროულობა' },
                 ].map((item) => (
                   <div key={item.title} className="rounded-lg bg-primary/10 p-4 text-center">
                     <item.icon className="mx-auto mb-2 h-8 w-8 text-primary" />
@@ -98,7 +98,7 @@ export default function SafeTransportation() {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <Image
                   src="/images/tiny-leaders/safe-transportation.svg"
-                  alt="Children boarding a safe and comfortable transport van at school"
+                  alt="ბავშვები უსაფრთხო და კომფორტულ ავტობუსში სკოლაში ერთიანდებიან"
                   width={1536}
                   height={864}
                   sizes="(max-width: 1024px) 100vw, 45vw"
@@ -106,15 +106,15 @@ export default function SafeTransportation() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/55 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-                  <p className="mb-2 text-sm font-semibold text-secondary">Citywide Coverage</p>
-                  <h3 className="text-2xl font-bold">Comfortable Vehicles • Trained Drivers • Supervised Routes</h3>
+                  <p className="mb-2 text-sm font-semibold text-secondary">ქალაქის მთლიანი დაფარვა</p>
+                  <h3 className="text-2xl font-bold">კომფორტული ავტომობილები • მომზადებული მძღოლები • მეთვალყურე მარშრუტები</h3>
                 </div>
               </div>
 
               <div className="rounded-xl bg-ink p-6 text-white">
                 <div className="mb-4 flex items-center gap-3">
                   <BusFront className="h-6 w-6 text-secondary" />
-                  <h4 className="text-xl font-bold">Parent Benefits</h4>
+                  <h4 className="text-xl font-bold">მშობლების სარგებელი</h4>
                 </div>
                 <ul className="grid gap-2">
                   {benefits.map((benefit) => (
@@ -132,5 +132,3 @@ export default function SafeTransportation() {
     </section>
   )
 }
-
-

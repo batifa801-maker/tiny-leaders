@@ -4,11 +4,17 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 
+const NAV_OFFSET = 96
+
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
-  const scrollToContact = () => {
-    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+  const scrollToSection = (id: string) => {
+    const element = document.querySelector(id)
+    if (!element) return
+
+    const top = element.getBoundingClientRect().top + window.scrollY - NAV_OFFSET
+    window.scrollTo({ top: Math.max(top, 0), behavior: 'smooth' })
   }
 
   const faqs = [
@@ -133,7 +139,7 @@ export default function FAQ() {
               თაინი ლიდერსის შესაბამის პროგრამას მოვარგებთ.
             </p>
             <button
-              onClick={scrollToContact}
+              onClick={() => scrollToSection('#contact')}
               className="rounded-full bg-white px-8 py-3 font-bold text-primary transition-colors hover:bg-mist"
             >
               კონტაქტი და ჩაწერა
